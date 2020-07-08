@@ -1,0 +1,30 @@
+<button (click)="event_mostrar()">+</button>
+<form *ngIf="show" action="">
+    <div style="color: red;">
+        {{error}}</div>
+    <input type="text"[(ngModel)]="persona.nombre"  name="nombre" placeholder="Nombre" >
+    <input type="text"[(ngModel)]="persona.a_paterno"  name="paterno" placeholder="apellido paterno" >
+    <input type="text"[(ngModel)]="persona.a_materno"  name="materno" placeholder="apellido materno" >
+    <input type="text"[(ngModel)]="persona.ci"  name="ci" placeholder="ci" >
+    <input type="text"[(ngModel)]="persona.login"  name="login" placeholder="login" >
+    <input type="password"[(ngModel)]="persona.password"  name="password" placeholder="password" >
+    <button (click)="event_registro()">Enviar</button>
+</form>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Paterno</th>
+        <th>Materno</th>
+        <th>CI</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let item of lista">
+        <td>{{item.nombre}}</td>
+        <td>{{item.a_paterno}}</td>
+        <td>{{item.a_materno}}</td>
+        <td>{{item.ci}}</td>
+        <td>-</td>
+    </tr>
+
+</table>
+
